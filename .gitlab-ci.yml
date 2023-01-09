@@ -32,4 +32,5 @@ docker-build:
     - docker manifest create $CI_REGISTRY_IMAGE${tag} 
       --amend $CI_REGISTRY_IMAGE${tag}-amd64 
       --amend $CI_REGISTRY_IMAGE${tag}-arm64v8
+    - docker manifest push $CI_REGISTRY_IMAGE${tag}
 
