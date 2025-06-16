@@ -24,3 +24,5 @@ Session.vim
 # IntelliJ
 .idea/
 *.iml
+
+election/vendor/
