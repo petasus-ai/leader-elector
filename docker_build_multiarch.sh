@@ -6,7 +6,7 @@ set -o pipefail
 KUBE_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
 
 TAG=${TAG:-1.0}
-REPO=${REPO:-registry.gitlab.com/sonaproject}
+REPO=${REPO:-quay.io/edgestack}
 PUSH=${PUSH:-}
 
 # support other container tools. e.g. podman
