@@ -10,9 +10,13 @@ on:
     tags: ["v*"]
   pull_request: {}
 
+# The shared workflow publishes the GitHub release of a release tag.
+permissions:
+  contents: write
+
 jobs:
   image:
-    uses: petasus-ai/.github/.github/workflows/image.yml@4d98d428714f0b985d8a8ad5b0b9a1443f51e872
+    uses: petasus-ai/.github/.github/workflows/image.yml@903fcb392fd610f96a6b9f44fb9bfe2751c0b8a5
     with:
       image: quay.io/edgestack/leader-elector
     secrets:
