@@ -1,0 +1,6 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Only the base images and the Actions: the code itself is kept as it is.",
+  "extends": ["github>petasus-ai/.github//renovate/default"],
+  "enabledManagers": ["github-actions", "dockerfile"]
+}
