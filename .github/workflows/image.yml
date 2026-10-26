@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   image:
-    uses: petasus-ai/.github/.github/workflows/image.yml@903fcb392fd610f96a6b9f44fb9bfe2751c0b8a5
+    uses: petasus-ai/.github/.github/workflows/image.yml@v1
     with:
       image: quay.io/edgestack/leader-elector
     secrets:
