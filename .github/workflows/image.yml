@@ -1,0 +1,19 @@
+name: Image
+
+# quay.io/edgestack/leader-elector: main publishes :dev, a release tag vX.Y.Z on
+# release-X.Y publishes :vX.Y.Z once and latest for the newest (the shared workflow of
+# petasus-ai/.github). The 1.0 tag, built by hand from the branch of that name before
+# the default branch became main, stays as it was for the charts that name it.
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request: {}
+
+jobs:
+  image:
+    uses: petasus-ai/.github/.github/workflows/image.yml@4d98d428714f0b985d8a8ad5b0b9a1443f51e872
+    with:
+      image: quay.io/edgestack/leader-elector
+    secrets:
+      registry-password: ${{ secrets.QUAY_CI_BOT_SECRET }}
